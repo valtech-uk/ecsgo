@@ -8,6 +8,7 @@ builds:
   goos:
     - linux
     - darwin
+    - windows
   goarch:
     - amd64
     - arm64
@@ -41,20 +42,20 @@ archives:
       - LICENSE
 release:
   github:
-    owner: tedsmitt
+    owner: valtech-uk
     name: ecsgo
-brews:
-  - name: ecsgo
-    tap:
-      owner: tedsmitt
-      name: homebrew-ecsgo
-      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    commit_author:
-      name: tedsmitt
-      email: edwardsmith92@outlook.com
-    description: "Interactive CLI tool which acts as a wrapper around the ECS ExecuteCommand API."
-    license: Apache2
-    test: |
-      system "#{bin}/goreleaser -v"
-    dependencies:
-    - name: go
+# brews:
+#   - name: ecsgo
+#     tap:
+#       owner: tedsmitt
+#       name: homebrew-ecsgo
+#       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+#     commit_author:
+#       name: tedsmitt
+#       email: edwardsmith92@outlook.com
+#     description: "Interactive CLI tool which acts as a wrapper around the ECS ExecuteCommand API."
+#     license: Apache2
+#     test: |
+#       system "#{bin}/goreleaser -v"
+#     dependencies:
+#     - name: go
